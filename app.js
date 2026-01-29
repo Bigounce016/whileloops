@@ -1,20 +1,6 @@
-console.log("prompt");
-console.log("response");
-
-person = prompt("please enter a valid number");
-while (isNaN(person)) {
-
-}
-console.log("The number you entered is: " + person);
-alert("The number you entered is: " + person);
-
-
-
-
-
 
 let gamble=false;
-let money=20;
+let money = 0;
 
 gamblingMoney = prompt("Do you want to gamble your life away?")
 // Main gambling loop
@@ -22,16 +8,19 @@ do {
     // Ask the user if they want to gamble
     // Loop until a valid response is given
     // Ask how much money they want to gamble
-    // Loop until they run out of money/decide to stop gambling/   win big
-   while (gamble==false) { 
+    // Loop until they run out of money/decide to stop gambling/win big
+   while (gamble===false) { 
         if (gamblingMoney.toLowerCase() == "yes") {
              gamble=true;
-             money = parseInt(prompt("How much money do you want to gamble?"));
-        } else if (gamblingMoney.toLowerCase() == "no") {
-             alert("You chose not to gamble. Goodbye!");
+             money = parseInt(prompt("How much money do you want to gamble?")); // asks how much money you want to gamble
+           
+        } else if (gamblingMoney.toLowerCase() == "no") { // Exit the game
+             alert("You chose not to gamble. Goodbye loser!"); // gives a goodbye message if you follow throgh with not gambling
+             money = 0;
+             gamble===false;
              break;
         } else {
-             gamblingMoney = prompt("Please answer 'yes' or 'no'. Do you want to gamble your life away?");
+             gamblingMoney = prompt("Please answer 'yes' or 'no'. Do you want to gamble your life away?"); // if person doesn't answer yes or no it will keep asking for specific answers
         }
      }
     while (money > 0) {
@@ -40,21 +29,17 @@ do {
                  alert("You cannot bet more than you have!");
                  continue;
           }
-          let outcome = Math.random() < 0.5 ? "win" : "lose"; //random generator of if you could win
+          let outcome = Math.random() < 0.1 ? "win" : "lose"; //random generator of if you could win
           if (outcome == "win") {
                  money += bet;
-                 alert("You won! You now have $" + money + ".");`1`
+                 alert("You won! You now have $" + money + ".");`1` // if you win it adds to your money
           } else {
                  money -= bet;
-                 alert("You lost! You now have $" + money + ".");
+                 alert("You lost! You now have $" + money + "."); //if you lose it takes away from your money
           }
 
     
 }
 }
- while (money > 0);
-if (money <= 0) {
-    alert("You are out of money! Game over.");
-    gamble = false;
-}
-
+while (gamble===true);
+alert("You are out of money! Game over."); // if you run out of money it ends the game
