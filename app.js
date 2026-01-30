@@ -4,7 +4,6 @@ let money = 2000;
 
 gamblingMoney = prompt("Do you want to gamble your life away?")
 // Main gambling loop
-do {
     // Ask the user if they want to gamble
     // Loop until a valid response is given
     // Ask how much money they want to gamble
@@ -40,6 +39,4 @@ do {
 
     
 }
-}
-while (gamble===true);
 alert("You are out of money! Game over."); // if you run out of money it ends the game
