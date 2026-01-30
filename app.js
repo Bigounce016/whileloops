@@ -39,4 +39,9 @@ gamblingMoney = prompt("Do you want to gamble your life away?")
 
     
 }
+<<<<<<< HEAD
+=======
+
+while (gamble===true);
+>>>>>>> 6f8629974e6b29fa43fa16281240915b5b21ec28
 alert("You are out of money! Game over."); // if you run out of money it ends the game
