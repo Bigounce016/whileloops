@@ -28,9 +28,10 @@ do {
                  alert("You cannot bet more than you have!");
                  continue;
           }
-          let outcome = Math.random() < 0.14 ? "win" : "lose"; //random generator of if you could win
+          let outcome = Math.random() < 0.10 ? "win" : "lose"; //random generator of if you could win
           if (outcome == "win") {
-                 money += bet * bet;
+                 money += bet
+                 ;
                  alert("You won! You now have $" + money + ".");`1` // if you win it adds to your money
           } else {
                  money -= bet;
