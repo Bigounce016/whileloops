@@ -36,12 +36,5 @@ gamblingMoney = prompt("Do you want to gamble your life away?")
                  money -= bet;
                  alert("You lost! You now have $" + money + "."); //if you lose it takes away from your money
           }
-
-    
 }
-<<<<<<< HEAD
-=======
-
-while (gamble===true);
->>>>>>> 6f8629974e6b29fa43fa16281240915b5b21ec28
 alert("You are out of money! Game over."); // if you run out of money it ends the game
