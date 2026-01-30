@@ -1,6 +1,6 @@
 
 let gamble=false;
-let money = 0;
+let money = 2000;
 
 gamblingMoney = prompt("Do you want to gamble your life away?")
 // Main gambling loop
@@ -11,8 +11,7 @@ do {
     // Loop until they run out of money/decide to stop gambling/win big
    while (gamble===false) { 
         if (gamblingMoney.toLowerCase() == "yes") {
-             gamble=true;
-             money = parseInt(prompt("How much money do you want to gamble?")); // asks how much money you want to gamble
+             gamble=true; // starts the game if you say yes to gambling`
            
         } else if (gamblingMoney.toLowerCase() == "no") { // Exit the game
              alert("You chose not to gamble. Goodbye loser!"); // gives a goodbye message if you follow throgh with not gambling
@@ -29,9 +28,9 @@ do {
                  alert("You cannot bet more than you have!");
                  continue;
           }
-          let outcome = Math.random() < 0.1 ? "win" : "lose"; //random generator of if you could win
+          let outcome = Math.random() < 0.14 ? "win" : "lose"; //random generator of if you could win
           if (outcome == "win") {
-                 money += bet;
+                 money += bet * bet;
                  alert("You won! You now have $" + money + ".");`1` // if you win it adds to your money
           } else {
                  money -= bet;
